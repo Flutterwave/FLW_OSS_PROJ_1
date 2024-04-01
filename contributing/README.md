@@ -11,7 +11,7 @@ to developers@flutterwavego.com.
 
 In this guide, you will get an overview of the contribution workflow from opening an issue, creating a PR, reviewing, and merging the PR.
 
-Use the table of contents  icon on the top left corner of this document to get to a specific section of this guide quickly.
+Use the table of contents icon at the top corner of this document to get to a specific section of this guide quickly.
 
 ## Getting started
 
