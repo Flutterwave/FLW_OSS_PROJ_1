@@ -11,3 +11,24 @@ export type User = {
   skills?: SkillsCreateNestedManyWithoutUsersInput,
   field?: string | null
 };
+
+export type UserState = {
+  errors?: {
+    name?: string[];
+    email?: string[];
+    password?: string[];
+    confirmPassword?: string[];
+    type?: string[];
+    location?: string[];
+    skills?: string[];
+    field?: string[]
+  };
+  message?: string;
+};
+
+export type Skill = {
+  id: string;
+  name: string;
+  created_at: Date;
+  updated_at: Date;
+};
