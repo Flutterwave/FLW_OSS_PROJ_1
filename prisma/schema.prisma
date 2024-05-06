@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
+}
+
+enum UserType {
+  FREELANCER
+  CLIENT
+}
+
+enum ProjectStatus {
+  CREATED
+  IN_PROGRESS
+  READY_FOR_TESTING
+  DONE
+}
+
+model skills {
+  id         String     @id @default(uuid())
+  name       String     @unique @db.VarChar(255)
+  users      users[]    @relation("user_skills")
+  projects   projects[] @relation("project_skills")
+  created_at DateTime   @default(now()) @db.Timestamp
+  updated_at DateTime   @default(now()) @updatedAt @db.Timestamp
+}
+
+model users {
+  id                     String                 @id @default(uuid())
+  name                   String                 @db.VarChar(255)
+  email                  String                 @unique @db.VarChar(255)
+  password               String                 // Password hash
+  type                   UserType
+  location               String                 // For both freelancers and clients
+  skills                 skills[]               @relation("user_skills")// Only applies to freelancers
+  field                  String?                // The industry that the client operates in (only applies to clients)
+  project_postings       projects[]
+  project_applications   project_applications[]
+  created_at             DateTime               @default(now()) @db.Timestamp
+  updated_at             DateTime               @default(now()) @updatedAt @db.Timestamp
+}
+
+model projects {
+  id                     String                 @id @default(uuid())
+  title                  String                 @db.VarChar(255)
+  description            String
+  skills                 skills[]               @relation("project_skills")// Skills required for the project
+  duration               Int                    // Duration of the project in days
+  amount                 Int                    // Amount offered for the project in minor currency unit (eg. cents)
+  currency               String                 @db.VarChar(3)
+  status                 ProjectStatus          @default(CREATED)
+  client                 users                  @relation(fields: [client_id], references: [id])
+  client_id              String                 // Foreign key referencing the client who posted the project
+  project_applications   project_applications[]
+  created_at             DateTime               @default(now()) @db.Timestamp
+  updated_at             DateTime               @default(now()) @updatedAt @db.Timestamp
+}
+
+model project_applications {
+  id         String       @id @default(uuid())
+  user       users        @relation(fields: [user_id], references: [id])
+  user_id    String       // Foreign key referencing the user who applied
+  project    projects     @relation(fields: [project_id], references: [id])
+  project_id String       // Foreign key referencing the project being applied for
+  created_at DateTime     @default(now()) @db.Timestamp
+}
