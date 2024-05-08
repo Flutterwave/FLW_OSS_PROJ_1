@@ -3,7 +3,7 @@ import TransactionsChart from '@/ui/dashboard/transactions-chart';
 import OngoingProjects from '@/ui/dashboard/ongoing-projects';
 import { lusitana } from '@/ui/fonts';
 import { Suspense } from 'react';
-import { TransactionsChartSkeleton, OngoingProjectsSkeleton, CardsSkeleton } from '@/ui/skeletons';
+import { TransactionsChartSkeleton, OngoingProjectsSkeleton, CardsSkeleton } from '@/ui/base-components/skeletons';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

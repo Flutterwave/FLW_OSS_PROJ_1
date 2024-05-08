@@ -9,7 +9,7 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { useCallback, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { lusitana } from '@/ui/fonts';
-import Button from '@/ui/button';
+import Button from '@/ui/base-components/button';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';

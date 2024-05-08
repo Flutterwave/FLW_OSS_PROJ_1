@@ -1,4 +1,4 @@
-import WaveworkLogo from '@/ui/wavework-logo';
+import WaveworkLogo from '@/ui/base-components/wavework-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { getServerSession } from 'next-auth';
