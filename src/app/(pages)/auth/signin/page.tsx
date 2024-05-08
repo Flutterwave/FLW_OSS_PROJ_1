@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
-import WaveworkLogo from '@/ui/wavework-logo';
+import WaveworkLogo from '@/ui/base-components/wavework-logo';
 import SignInForm from '@/ui/auth/signin-form';
 
 export const metadata: Metadata = {

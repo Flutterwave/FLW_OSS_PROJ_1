@@ -1,7 +1,7 @@
 'use client';
 
 import NavLinks from '@/ui/authenticated/nav-links';
-import WaveworkLogo from '@/ui/wavework-logo';
+import WaveworkLogo from '@/ui/base-components/wavework-logo';
 import { PowerIcon } from '@heroicons/react/24/outline';
 import { signOut } from 'next-auth/react';
 import { useCallback } from 'react';
