@@ -1,8 +1,8 @@
-import Search from '@/ui/search';
+import Search from '@/ui/base-components/search';
 import Table from '@/ui/projects/table';
 import { CreateProject } from '@/ui/projects/buttons';
 import { lusitana } from '@/ui/fonts';
-import { ProjectsTableSkeleton } from '@/ui/skeletons';
+import { ProjectsTableSkeleton } from '@/ui/base-components/skeletons';
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 
