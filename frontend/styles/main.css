@@ -1,0 +1,13 @@
+@import url(https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+[data-menu]:not([data-expanded]) {
+  display: none;
+}
+
+.testimonial:not(.active) {
+  display: none;
+}
