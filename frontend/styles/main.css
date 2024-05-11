@@ -7,3 +7,7 @@ body {
 [data-menu]:not([data-expanded]) {
   display: none;
 }
+
+.testimonial:not(.active) {
+  display: none;
+}
