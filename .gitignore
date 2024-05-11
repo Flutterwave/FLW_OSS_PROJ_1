@@ -8,3 +8,9 @@ Thumbs.db
 
 # Ignore dependency directories
 /vendor/
+
+# Ignore lock files
+*.lock
+
+# Ignore node modules
+node_modules
