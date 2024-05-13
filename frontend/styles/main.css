@@ -11,3 +11,13 @@ body {
 .testimonial:not(.active) {
   display: none;
 }
+
+:root {
+  --icon-color: #3482F6; /* Icon color */
+  --icon-size: 32px; /* Icon size */
+}
+
+.icon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
