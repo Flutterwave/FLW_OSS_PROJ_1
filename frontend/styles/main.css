@@ -1,0 +1,23 @@
+@import url(https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+[data-menu]:not([data-expanded]) {
+  display: none;
+}
+
+.testimonial:not(.active) {
+  display: none;
+}
+
+:root {
+  --icon-color: #3482F6; /* Icon color */
+  --icon-size: 32px; /* Icon size */
+}
+
+.icon {
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
